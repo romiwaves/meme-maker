@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Maker</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <canvas></canvas>
+    <input id="line-width" type ="range" min ="1" max="10" value="5" />
+    <div>
+        <input type="color" id="color" />
+        <div class="color-option" style="background-color: #fd79a8;" data-color="#fd79a8"></div>
+        <div class="color-option" style="background-color: #d63031;" data-color="#d63031"></div>
+        <div class="color-option" style="background-color: #e17055;" data-color="#e17055"></div>
+        <div class="color-option" style="background-color: #fdcb6e;" data-color="#fdcb6e"></div>
+        <div class="color-option" style="background-color: #00b894;" data-color="#00b894"></div>
+        <div class="color-option" style="background-color: #74b9ff;" data-color="#74b9ff"></div>
+        <div class="color-option" style="background-color: #6c5ce7;" data-color="#6c5ce7"></div>
+        <div class="color-option" style="background-color: #dfe6e9;" data-color="#dfe6e9"></div>
+        <div class="color-option" style="background-color: #2d3436;" data-color="#2d3436"></div>
+    </div>
+    <button id="mode-btn">Fill</button>
+    <button id="destroy-btn">Destroy</button>
+    <button id="erase-btn">Erase</button>
+    <script src="app.js"></script>
+</body>
+</html>
