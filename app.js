@@ -11,6 +11,8 @@ const eraseBtn = document.getElementById("erase-btn");
 const fileInput = document.getElementById("file");
 const textInput = document.getElementById("text");
 const saveBtn = document.getElementById("save");
+const fontSelection = document.getElementById("font-selection");
+const textSize = document.getElementById("font-size");
 
 const CANVAS_WIDTH = 800;
 const CANVAS_HEIGHT = 800;
@@ -21,6 +23,8 @@ ctx.lineWidth = lineWidth.value;
 ctx.lineCap = "round";
 let isPainting = false;
 let isFilling = false;
+let fontName = "";
+let fontSize = "";
 
 function onMove(event) {
     if(isPainting) {
@@ -99,7 +103,7 @@ function onDoubleClick(event) {
     if (text !== ""){
     ctx.save();
     ctx.lineWidth = 1;
-    ctx.font = "48px serif";
+    ctx.font = `${fontSize}px ${fontName}`;
     ctx.fillText(text, event.offsetX, event.offsetY);
     ctx.restore();
     }
@@ -112,6 +116,17 @@ function onSaveClick() {
     a.download = "myDrawing.png";
     a.click();
 }
+
+function onFontClick() {
+    fontName = fontSelection.value;
+}
+
+function onSizeClick(event) {
+    fontSize = event.target.value;
+}
+
+fontSelection.addEventListener("change", onFontClick);
+textSize.addEventListener("change", onSizeClick);
 
 canvas.addEventListener("dblclick", onDoubleClick);
 canvas.addEventListener("mousemove", onMove);

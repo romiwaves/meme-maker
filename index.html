@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <canvas></canvas>
-    <input id="line-width" type ="range" min ="1" max="10" value="5" />
-    <div>
+    <div class="color-options">
         <input type="color" id="color" />
         <div class="color-option" style="background-color: #fd79a8;" data-color="#fd79a8"></div>
         <div class="color-option" style="background-color: #d63031;" data-color="#d63031"></div>
@@ -21,12 +19,24 @@
         <div class="color-option" style="background-color: #dfe6e9;" data-color="#dfe6e9"></div>
         <div class="color-option" style="background-color: #2d3436;" data-color="#2d3436"></div>
     </div>
-    <button id="mode-btn">Fill</button>
-    <button id="destroy-btn">Destroy</button>
-    <button id="erase-btn">Erase</button>
-    <input type="file" accept="image/*" id="file" />
-    <input type="text" placeholder="Write and then double click" id="text" />
-    <button id="save">Save image</button>
-    <script src="app.js"></script>
+    <canvas></canvas>
+    <div class="btns">
+        <input id="line-width" type ="range" min ="1" max="10" value="5" />
+        <button id="mode-btn">Fill</button>
+        <button id="destroy-btn">Destroy</button>
+        <button id="erase-btn">Erase</button>
+        <input type="file" accept="image/*" id="file" />
+        <input type="text" placeholder="Write and then double click" id="text" />
+        <select id="font-selection">
+            <option selected>serif</option>
+            <option>sans-serif</option>
+            <option>monospace</option>
+            <option>cursive</option>
+            <option>fantasy</option>
+        </select>
+        <input id="font-size" type="range" min="30" max="100" value="48" />
+        <button id="save">Save image</button>
+        <script src="app.js"></script>
+    </div>
 </body>
 </html>
